@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/profile/static/css/main.302c8b43.css",
-    "main.js": "/profile/static/js/main.44127195.js",
-    "static/js/787.1ed0c42c.chunk.js": "/profile/static/js/787.1ed0c42c.chunk.js",
+    "main.js": "/profile/static/js/main.65e1b9bb.js",
+    "static/js/787.f2a0fa2f.chunk.js": "/profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/20BCE503_Jaimik Chauhan.pdf": "/profile/static/media/20BCE503_Jaimik Chauhan.e15af9a2b15eeac5f878.pdf",
     "static/media/whatsapp.png": "/profile/static/media/whatsapp.a858530fe23752d81bc6.png",
     "static/media/2021 Twitter logo - black.png": "/profile/static/media/2021 Twitter logo - black.9685c410a6499b9ebc16.png",
     "static/media/avataaars.svg": "/profile/static/media/avataaars.aa9aff02ddd0ef36a1724ecef4133df9.svg",
     "index.html": "/profile/index.html",
     "main.302c8b43.css.map": "/profile/static/css/main.302c8b43.css.map",
-    "main.44127195.js.map": "/profile/static/js/main.44127195.js.map",
-    "787.1ed0c42c.chunk.js.map": "/profile/static/js/787.1ed0c42c.chunk.js.map"
+    "main.65e1b9bb.js.map": "/profile/static/js/main.65e1b9bb.js.map",
+    "787.f2a0fa2f.chunk.js.map": "/profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.302c8b43.css",
-    "static/js/main.44127195.js"
+    "static/js/main.65e1b9bb.js"
   ]
 }
