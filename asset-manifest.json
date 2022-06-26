@@ -1,19 +1,28 @@
 {
   "files": {
-    "main.css": "/profile/static/css/main.302c8b43.css",
-    "main.js": "/profile/static/js/main.010060de.js",
+    "main.css": "/profile/static/css/main.8fab60b1.css",
+    "main.js": "/profile/static/js/main.273b0f74.js",
     "static/js/787.f2a0fa2f.chunk.js": "/profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/Jaimik Chauhan.pdf": "/profile/static/media/Jaimik Chauhan.185234f9ae36a631637c.pdf",
+    "static/media/react.jpg": "/profile/static/media/react.580b2973e20bff7e4bc2.jpg",
+    "static/media/mysql.png": "/profile/static/media/mysql.bdbd1eb709e4c13258d2.png",
+    "static/media/node.png": "/profile/static/media/node.007e99f68b718e476aba.png",
     "static/media/whatsapp.png": "/profile/static/media/whatsapp.a858530fe23752d81bc6.png",
+    "static/media/html.png": "/profile/static/media/html.a92a549a591f4acb527a.png",
+    "static/media/css.png": "/profile/static/media/css.02d225c7df0b28341d8d.png",
+    "static/media/mongodb.png": "/profile/static/media/mongodb.a8889d623357ad8ce30e.png",
     "static/media/2021 Twitter logo - black.png": "/profile/static/media/2021 Twitter logo - black.9685c410a6499b9ebc16.png",
+    "static/media/postman.png": "/profile/static/media/postman.2cb0a6961be179605ad1.png",
     "static/media/avataaars.svg": "/profile/static/media/avataaars.aa9aff02ddd0ef36a1724ecef4133df9.svg",
+    "static/media/js.webp": "/profile/static/media/js.ff4e3c8c1c21c479f063.webp",
+    "static/media/java.webp": "/profile/static/media/java.9d775f1c062d7d320a2f.webp",
     "index.html": "/profile/index.html",
-    "main.302c8b43.css.map": "/profile/static/css/main.302c8b43.css.map",
-    "main.010060de.js.map": "/profile/static/js/main.010060de.js.map",
+    "main.8fab60b1.css.map": "/profile/static/css/main.8fab60b1.css.map",
+    "main.273b0f74.js.map": "/profile/static/js/main.273b0f74.js.map",
     "787.f2a0fa2f.chunk.js.map": "/profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.302c8b43.css",
-    "static/js/main.010060de.js"
+    "static/css/main.8fab60b1.css",
+    "static/js/main.273b0f74.js"
   ]
 }
