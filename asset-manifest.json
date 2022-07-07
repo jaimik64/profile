@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/profile/static/css/main.73e3ef71.css",
-    "main.js": "/profile/static/js/main.0136c685.js",
+    "main.js": "/profile/static/js/main.fbe56fc5.js",
     "static/js/787.f2a0fa2f.chunk.js": "/profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/Jaimik Chauhan.pdf": "/profile/static/media/Jaimik Chauhan.185234f9ae36a631637c.pdf",
     "static/media/react.jpg": "/profile/static/media/react.580b2973e20bff7e4bc2.jpg",
@@ -18,11 +18,11 @@
     "static/media/java.webp": "/profile/static/media/java.9d775f1c062d7d320a2f.webp",
     "index.html": "/profile/index.html",
     "main.73e3ef71.css.map": "/profile/static/css/main.73e3ef71.css.map",
-    "main.0136c685.js.map": "/profile/static/js/main.0136c685.js.map",
+    "main.fbe56fc5.js.map": "/profile/static/js/main.fbe56fc5.js.map",
     "787.f2a0fa2f.chunk.js.map": "/profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73e3ef71.css",
-    "static/js/main.0136c685.js"
+    "static/js/main.fbe56fc5.js"
   ]
 }
