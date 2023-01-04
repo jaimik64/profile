@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/profile/static/css/main.11579571.css",
-    "main.js": "/profile/static/js/main.61f93ead.js",
+    "main.js": "/profile/static/js/main.300ea7e7.js",
     "static/js/787.f2a0fa2f.chunk.js": "/profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/react.jpg": "/profile/static/media/react.580b2973e20bff7e4bc2.jpg",
-    "static/media/Jaimik Chauhan.pdf": "/profile/static/media/Jaimik Chauhan.038f24ba89e8b8dc0bf6.pdf",
+    "static/media/Jaimik Chauhan.pdf": "/profile/static/media/Jaimik Chauhan.a276c18b509fa5a921d9.pdf",
     "static/media/mysql.png": "/profile/static/media/mysql.bdbd1eb709e4c13258d2.png",
     "static/media/node.png": "/profile/static/media/node.007e99f68b718e476aba.png",
     "static/media/whatsapp.png": "/profile/static/media/whatsapp.a858530fe23752d81bc6.png",
@@ -18,11 +18,11 @@
     "static/media/java.webp": "/profile/static/media/java.9d775f1c062d7d320a2f.webp",
     "index.html": "/profile/index.html",
     "main.11579571.css.map": "/profile/static/css/main.11579571.css.map",
-    "main.61f93ead.js.map": "/profile/static/js/main.61f93ead.js.map",
+    "main.300ea7e7.js.map": "/profile/static/js/main.300ea7e7.js.map",
     "787.f2a0fa2f.chunk.js.map": "/profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.11579571.css",
-    "static/js/main.61f93ead.js"
+    "static/js/main.300ea7e7.js"
   ]
 }
