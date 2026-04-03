@@ -19,7 +19,7 @@ const Hero = () => {
             className="lg:hidden w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden glassmorphism border border-white/10 shadow-lg shadow-electric-blue/20 p-1 bg-gradient-to-tr from-electric-blue/30 to-transparent shrink-0"
           >
             <img
-              src="/images/profile.jpg"
+              src={`${import.meta.env.BASE_URL}images/profile.jpg`}
               alt="Jaimik Chauhan"
               className="w-full h-full object-cover rounded-full"
             />
@@ -48,7 +48,7 @@ const Hero = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/Jaimik_Chauhan_Resume.pdf"
+            href={`${import.meta.env.BASE_URL}Jaimik_Chauhan_Resume.pdf`}
             download="Jaimik_Chauhan_Resume.pdf"
             className="flex items-center justify-center gap-2 bg-electric-blue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-medium transition-colors shadow-lg shadow-blue-500/25"
           >
@@ -78,7 +78,7 @@ const Hero = () => {
           <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2.5rem] md:rounded-[3rem] pointer-events-none" />
           <div className="absolute inset-0 bg-electric-blue/10 mix-blend-overlay group-hover:bg-transparent transition-colors duration-500 z-10" />
           <img
-            src="/images/profile.jpg"
+            src={`${import.meta.env.BASE_URL}images/profile.jpg`}
             alt="Jaimik Chauhan"
             className="w-full h-full object-cover rounded-[2.3rem] md:rounded-[2.8rem] transform group-hover:scale-105 transition-transform duration-700"
           />
