@@ -4,6 +4,7 @@ import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 
 interface Project {
+  id: number;
   title: string;
   problem: string;
   solution: string;
@@ -15,6 +16,7 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 1,
     title: 'Document Reviewer',
     problem: 'Banking clients needed an efficient way to review and analyze customer account statements.',
     solution: 'Designed and developed a React-based web application calculating credit and loans eligibility, improving decision-making accuracy.',
@@ -22,6 +24,7 @@ const projects: Project[] = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=500'
   },
   {
+    id: 2,
     title: 'Mess Eats',
     problem: 'Bachelors faced frequent difficulties tracking and managing their daily meals efficiently.',
     solution: 'Engineered a highly responsive MERN stack web application to solve common food-related problems with seamless frontend interaction.',
@@ -30,6 +33,7 @@ const projects: Project[] = [
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800&h=500'
   },
   {
+    id: 3,
     title: 'Donation Management System',
     problem: 'NGOs required an organized web-based platform to manage and track global donations.',
     solution: 'A full-stack web application built efficiently parsing SQL operations ensuring solid administration workflows.',
@@ -38,6 +42,7 @@ const projects: Project[] = [
     image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?auto=format&fit=crop&q=80&w=800&h=500'
   },
   {
+    id: 4,
     title: 'Car Rental System',
     problem: 'Manual tracking of car rental lifecycles was tedious and error-prone.',
     solution: 'Developed a robust Django application focused on easy reservations and seamless scalable backends.',
