@@ -23,7 +23,7 @@ const Experience = () => {
 
         <div className="relative">
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-slate-800 transform md:-translate-x-1/2" />
-          {experiences.map((exp, index) => (
+          {experiences.map((exp: any, index: number) => (
 
             <div key={index} className={`relative flex flex-col md:flex-row items-center mb-16 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
               <div className="absolute left-4 md:left-1/2 w-6 h-6 bg-electric-blue rounded-full border-4 border-slate-900 z-10 transform -translate-x-1/2 md:-translate-x-1/2 mt-6 md:mt-0" />
@@ -56,7 +56,7 @@ const Experience = () => {
                   </h4>
 
                   <ul className="space-y-3">
-                    {exp.achievements.map((bullet, i) => (
+                    {exp.achievements.map((bullet: any, i: number) => (
                       <li key={i} className="text-slate-300 text-sm leading-relaxed flex items-start">
                         <span className="text-electric-blue mr-2 mt-1.5">•</span>
                         {bullet}

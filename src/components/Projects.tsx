@@ -35,7 +35,7 @@ const Projects = () => {
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project: any, index: number) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ const Projects = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-8">
-                  {project.tags.map(tag => (
+                  {project.tags.map((tag: any) => (
                     <span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300">
                       {tag}
                     </span>
