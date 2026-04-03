@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
+import { profileData } from '../data/profileData';
 
 interface Project {
   id: number;
@@ -14,45 +15,10 @@ interface Project {
   demoLink?: string;
 }
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: 'Document Reviewer',
-    problem: 'Banking clients needed an efficient way to review and analyze customer account statements.',
-    solution: 'Designed and developed a React-based web application calculating credit and loans eligibility, improving decision-making accuracy.',
-    tags: ['React', 'JavaScript', 'Tailwind CSS'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=500'
-  },
-  {
-    id: 2,
-    title: 'Mess Eats',
-    problem: 'Bachelors faced frequent difficulties tracking and managing their daily meals efficiently.',
-    solution: 'Engineered a highly responsive MERN stack web application to solve common food-related problems with seamless frontend interaction.',
-    tags: ['MERN Stack', 'MongoDB', 'Node.js', 'React'],
-    codeLink: 'https://github.com/jaimik64/MERN_Mess_Eats',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800&h=500'
-  },
-  {
-    id: 3,
-    title: 'Donation Management System',
-    problem: 'NGOs required an organized web-based platform to manage and track global donations.',
-    solution: 'A full-stack web application built efficiently parsing SQL operations ensuring solid administration workflows.',
-    tags: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
-    codeLink: 'https://github.com/jaimik64/pro_donate',
-    image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?auto=format&fit=crop&q=80&w=800&h=500'
-  },
-  {
-    id: 4,
-    title: 'Car Rental System',
-    problem: 'Manual tracking of car rental lifecycles was tedious and error-prone.',
-    solution: 'Developed a robust Django application focused on easy reservations and seamless scalable backends.',
-    tags: ['Django', 'Python', 'HTML/CSS'],
-    codeLink: 'https://github.com/jaimik64/django_CarRentalSystem',
-    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800&h=500'
-  }
-];
-
 const Projects = () => {
+
+  const { projects } = profileData;
+
   return (
     <section id="projects" className="py-20">
       <motion.div
@@ -76,7 +42,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="glassmorphism rounded-3xl overflow-hidden group border-white/5 hover:border-white/20 transition-all flex flex-col"
+              className="glassmorphism rounded-3xl overflow-hidden group border-white/5 hover:border-electric-blue/50 transition-all flex flex-col"
             >
               <div className="relative h-60 overflow-hidden shrink-0">
                 <div className="absolute inset-0 bg-deep-slate/40 group-hover:bg-transparent transition-colors z-10" />

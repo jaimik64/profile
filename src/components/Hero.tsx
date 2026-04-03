@@ -11,12 +11,12 @@ const Hero = () => {
         transition={{ duration: 0.5 }}
         className="max-w-3xl flex-1 relative z-10"
       >
-        <div className="flex items-center gap-4 mb-4">
+        <div className="justify-center lg:justify-start lg:flex grid items-center gap-4 mb-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="lg:hidden w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden glassmorphism border border-white/10 shadow-lg shadow-electric-blue/20 p-1 bg-gradient-to-tr from-electric-blue/30 to-transparent shrink-0"
+            className="lg:hidden w-64 h-64 md:align-center rounded-full overflow-hidden glassmorphism border border-white/10 shadow-lg shadow-electric-blue/20 p-1 bg-gradient-to-tr from-electric-blue/30 to-transparent shrink-0"
           >
             <img
               src={`${import.meta.env.BASE_URL}images/profile.jpg`}

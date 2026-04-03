@@ -3,6 +3,8 @@ import TechStack from './components/TechStack';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
+import About from './components/AboutMe';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -13,11 +15,13 @@ function App() {
       <div className="relative z-10">
         <main className="container mx-auto px-6 max-w-6xl">
           <Hero />
+          <About />
           <TechStack />
           <Projects />
           <Experience />
         </main>
         <Footer />
+        <ScrollToTop />
       </div>
     </div>
   );

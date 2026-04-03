@@ -1,42 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase } from 'lucide-react';
+import { profileData } from '../data/profileData';
+import { FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
 
-const experiences = [
-  {
-    role: "Software Developer",
-    company: "Addverb Technology",
-    period: "January 2023 - Present",
-    achievements: [
-      "Designed and implemented user-friendly UIs for multiple modules, including collaborations with leading Indian fashion warehouse brands and market leaders in fashion, grocery, and beauty, delivering intuitive and seamless designs",
-      "Developed generic reusable components using Angular and Angular Material UI, accelerating project delivery.",
-      "Built RESTful APIs using Spring Boot and integrated them with Angular frontends for seamless data exchange.",
-      "Developed database schemas, wrote optimized SQL queries, and managed CRUD operations using MySQL/PostgreSQL."
-    ]
-  },
-  {
-    role: "Software Engineer Intern",
-    company: "eInfoChips - An Arrow Company",
-    period: "May 2022 - July 2022",
-    achievements: [
-      "Developed a .NET-based web application to help bookstore owners efficiently manage their inventory and stock levels.",
-      "Designed and implemented frontend interfaces for seamless user interaction and backend services for robust stock management."
-    ]
-  },
-  {
-    role: "Full Stack Developer",
-    company: "Webmate.in",
-    period: "June 2020 - Dec 2020",
-    achievements: [
-      "Developed end-to-end full stack solutions tailored to business requirements.",
-      "Maintained and improved existing codebase ensuring code quality and performance."
-    ]
-  }
-];
 
 const Experience = () => {
+
+  const { experiences } = profileData;
+
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="section-odd section-padding relative overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -48,47 +21,51 @@ const Experience = () => {
           Work <span className="text-electric-blue">Experience</span>
         </h2>
 
-        <div className="relative border-l border-white/10 ml-4 md:ml-8 space-y-12">
+        <div className="relative">
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-slate-800 transform md:-translate-x-1/2" />
           {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="relative pl-8 md:pl-12"
-            >
-              {/* Timeline Dot */}
-              <div className="absolute -left-3.5 top-1.5 w-7 h-7 rounded-full bg-deep-slate border-2 border-electric-blue flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                <div className="w-2 h-2 rounded-full bg-electric-blue"></div>
-              </div>
 
-              <div className="glassmorphism p-8 rounded-3xl group border-l-4 border-l-electric-blue hover:bg-white/10 transition-all cursor-default">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-electric-blue transition-colors">
-                      {exp.role}
-                    </h3>
-                    <div className="flex items-center text-slate-300 gap-2 font-medium">
-                      <Briefcase size={16} className="text-electric-blue" />
-                      {exp.company}
-                    </div>
-                  </div>
-                  <span className="mt-2 md:mt-0 px-4 py-1.5 bg-electric-blue/10 text-electric-blue border border-electric-blue/20 rounded-full text-sm font-semibold whitespace-nowrap self-start">
-                    {exp.period}
-                  </span>
+            <div key={index} className={`relative flex flex-col md:flex-row items-center mb-16 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
+              <div className="absolute left-4 md:left-1/2 w-6 h-6 bg-electric-blue rounded-full border-4 border-slate-900 z-10 transform -translate-x-1/2 md:-translate-x-1/2 mt-6 md:mt-0" />
+
+              {/* Date (for desktop) */}
+              <div className={`hidden md:block w-1/2 px-12 md:px-16 lg:px-20 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                <div className={`text-electric-blue font-mono text-lg font-bold flex items-center gap-2 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
+                  {index % 2 !== 0 && <FaCalendarAlt />}
+                  {exp.period}
+                  {index % 2 === 0 && <FaCalendarAlt />}
                 </div>
-
-                <ul className="space-y-3">
-                  {exp.achievements.map((item, idx) => (
-                    <li key={idx} className="flex gap-3 text-slate-300 text-sm leading-relaxed">
-                      <span className="text-electric-blue mt-1">▹</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </motion.div>
+              {/* Content Card */}
+              <motion.div
+                initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className={`w-full md:w-1/2 ${index % 2 === 0 ? 'pl-12 md:pl-16 lg:pl-24' : 'pl-12 md:pl-0 md:pr-16 lg:pr-24'}`}
+              >
+                <div className="glassmorphism p-8 rounded-2xl transition-all shadow-xl hover:-translate-y-1 relative group hover:border-electric-blue/30">
+                  {/* Mobile Date */}
+                  <div className="md:hidden text-electric-blue font-mono text-sm font-bold mb-2 flex items-center gap-2">
+                    <FaCalendarAlt /> {exp.period}
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-electric-blue transition-colors">{exp.role}</h3>
+                  <h4 className="text-lg text-slate-400 font-medium mb-4 flex items-center gap-2">
+                    <FaBriefcase className="text-slate-500" /> {exp.company}
+                  </h4>
+
+                  <ul className="space-y-3">
+                    {exp.achievements.map((bullet, i) => (
+                      <li key={i} className="text-slate-300 text-sm leading-relaxed flex items-start">
+                        <span className="text-electric-blue mr-2 mt-1.5">•</span>
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            </div>
           ))}
         </div>
       </motion.div>
