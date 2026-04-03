@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-deep-slate text-crisp-white font-sans overflow-x-hidden antialiased;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+}
