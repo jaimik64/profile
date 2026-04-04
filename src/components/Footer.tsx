@@ -47,23 +47,20 @@ const Footer = () => {
           </motion.a>
         </div>
 
-        <div className="flex items-center gap-2 bg-white/70 border border-white rounded-full p-2 mb-8 shadow-sm">
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pink-100 text-pink-700">
-            <Mail size={18} />
+        <motion.button
+          whileHover={{ scale: 1.02, y: -2 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={handleCopyEmail}
+          className="flex items-center justify-between gap-3 bg-white/80 hover:bg-white text-text-main px-5 py-3 rounded-full transition-all shadow-sm border border-white font-bold mb-8 w-full max-w-[300px] group"
+        >
+          <div className="flex items-center gap-3 overflow-hidden">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-pink-100 text-pink-700 shrink-0 group-hover:scale-110 transition-transform">
+              <Mail size={14} />
+            </div>
+            <span className="truncate text-sm">{copied ? 'Email copied to clipboard!' : email}</span>
           </div>
-          <span className="text-text-main font-bold px-2 truncate sm:max-w-none max-w-[150px]">
-            {email}
-          </span>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleCopyEmail}
-            className="ml-2 flex items-center gap-2 bg-pink-700 hover:bg-pink-600 text-white px-5 py-2 text-sm font-bold rounded-full transition-colors shadow-sm"
-          >
-            {copied ? <Check size={16} /> : <Copy size={16} />}
-            {copied ? 'Copied!' : 'Copy'}
-          </motion.button>
-        </div>
+          {copied ? <Check size={16} className="text-green-500 shrink-0" /> : <Copy size={16} className="text-text-muted opacity-50 group-hover:opacity-100 transition-opacity shrink-0" />}
+        </motion.button>
 
         <p className="text-accent-purple/70 font-bold text-sm">
           © {new Date().getFullYear()} Diya Chauhan. Made with 🤍

@@ -15,19 +15,28 @@ function App() {
       <div className="fixed top-[20%] right-[-5%] w-96 h-96 bg-purple-700/20 rounded-full filter blur-3xl opacity-70 animate-blob animation-delay-2000 pointer-events-none z-0"></div>
       <div className="fixed bottom-[-10%] left-[20%] w-[30rem] h-[30rem] bg-rose-700/20 rounded-full filter blur-3xl opacity-70 animate-blob animation-delay-4000 pointer-events-none z-0"></div>
 
-      <div className="relative z-10 px-4 sm:px-6 py-12 md:py-20 w-full min-h-screen flex flex-col items-center justify-start">
-        <div className="w-full max-w-[1240px]">
-          <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(180px,auto)] grid-flow-row-dense">
-            <Hero />
-            <TechStack />
-            {/* The rest of the legacy components will be converted to tiles sequentially */}
-            <About />
-            <Projects />
-            <Experience />
+      <div className="relative z-10 w-full min-h-screen flex justify-center">
+        <div className="w-full max-w-[1200px]">
+          <main className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 px-6 py-12 md:py-20 lg:py-0">
+            {/* Left Column: Sticky Anchor */}
+            <div className="lg:col-span-4 lg:h-screen lg:sticky lg:top-0 py-0 lg:py-24 flex flex-col justify-between">
+               <Hero />
+               <div className="hidden lg:block">
+                 <Footer />
+               </div>
+            </div>
+            
+            {/* Right Column: Scroll Content */}
+            <div className="lg:col-span-8 py-0 lg:py-24 space-y-24 lg:space-y-36">
+               <About />
+               <TechStack />
+               <Experience />
+               <Projects />
+               <div className="lg:hidden block pt-10">
+                 <Footer />
+               </div>
+            </div>
           </main>
-          <div className="mt-20">
-             <Footer />
-          </div>
         </div>
       </div>
       
