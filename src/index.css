@@ -4,12 +4,24 @@
 
 @layer base {
   body {
-    @apply bg-deep-slate text-crisp-white font-sans overflow-x-hidden antialiased;
+    background-color: #fdf2f8;
+    color: #0f172a;
+    @apply font-sans overflow-x-hidden antialiased;
   }
 }
 
 @layer utilities {
-  .glassmorphism {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-2xl border-2 border-white shadow-[0_10px_40px_rgba(219,39,119,0.1)] rounded-[2.5rem];
+  }
+  .glass-pill {
+    @apply bg-white/90 backdrop-blur-lg border-2 border-white shadow-sm rounded-full;
+    color: #0f172a;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
   }
 }

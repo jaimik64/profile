@@ -1,99 +1,79 @@
 export const profileData = {
     personalInfo: {
-        name: "Jaimik Chauhan",
-        subtitle: "Full-Stack Developer",
+        name: "Diya Chauhan",
+        subtitle: "UI/UX & Frontend Developer",
         contact: {
-            phone: "+91 84015 63076",
-            email: "jaimik.chauhan06@gmail.com",
-            location: "Noida, UP, India",
-            linkedin: "https://linkedin.com/in/jaimikchauhan64",
-            github: "https://github.com/jaimik64" // Inferred from portfolio URL
+            phone: "+91 9898506910",
+            email: "chauhandiya2114@gmail.com",
+            location: "Gujarat, India",
+            linkedin: "https://www.linkedin.com/in/diya-chauhan14/",
+            github: "https://github.com/Diya-Chauhan"
         },
-        summary: "Versatile Full-Stack Developer experienced in React, Angular, Node.js, and Spring Boot, collaborating across teams to design responsive frontends and robust backends that power efficient, user-centric applications."
+        summary: "UI/UX & Frontend Developer with experience in creating high-fidelity prototypes and developing responsive layouts using HTML, CSS, JavaScript, and Bootstrap. Strong background in Python development, UI redesigns, and user-centric interfaces."
     },
     education: [
         {
             id: 1,
-            institution: "Institute of Technology, Nirma University",
-            degree: "Bachelor's, Computer Science",
-            duration: "July 2020 - June 2023",
-            gpa: "8.23"
+            institution: "U.V. Patel College Of Engineering, Ganpat University",
+            degree: "B.Tech in Computer Engineering",
+            duration: "Aug'21 - May'25",
+            gpa: "7.0 CGPA"
         },
         {
             id: 2,
-            institution: "B AND B INSTITUTE OF TECHNOLOGY, GUJARAT TECHNOLOGICAL UNIVERSITY",
-            degree: "Diploma, Computer Engineering",
-            duration: "July 2017 - June 2020",
-            gpa: "9.81"
+            institution: "Shri Vividhlaxi Vidyamandir, Palanpur",
+            degree: "XII",
+            duration: "Mar'21",
+            gpa: "70%"
+        },
+        {
+            id: 3,
+            institution: "Shri Vividhlaxi Vidyamandir, Palanpur",
+            degree: "X",
+            duration: "Mar'19",
+            gpa: "60%"
         }
     ],
     experiences: [
         {
-            role: "Software Developer",
-            company: "Addverb Technology",
-            period: "January 2023 - Present",
+            role: "UI/UX Intern",
+            company: "Vnnovate Solutions Pvt. Ltd.",
+            period: "Jan'25 - April'25",
             achievements: [
-                "Designed and implemented user-friendly UIs for multiple modules, including collaborations with leading Indian fashion warehouse brands and market leaders in fashion, grocery, and beauty, delivering intuitive and seamless designs",
-                "Developed generic reusable components using Angular and Angular Material UI, accelerating project delivery.",
-                "Built RESTful APIs using Spring Boot and integrated them with Angular frontends for seamless data exchange.",
-                "Developed database schemas, wrote optimized SQL queries, and managed CRUD operations using MySQL/PostgreSQL."
+                "Led the redesign of the official Vnnovate Solutions website as part of a strategic UX improvement project",
+                "Created high-fidelity prototypes in Figma focusing on modern aesthetics, usability, and responsiveness",
+                "Developed responsive front end layouts using HTML, CSS, and Bootstrap without custom CSS",
+                "Improved website structure and user flow to enhance engagement and performance."
             ]
         },
         {
-            role: "Software Engineer Intern",
-            company: "eInfoChips - An Arrow Company",
-            period: "May 2022 - July 2022",
+            role: "Python Development Intern",
+            company: "Vnnovate Solutions Pvt. Ltd.",
+            period: "Dec'23 - Jan'24",
             achievements: [
-                "Developed a .NET-based web application to help bookstore owners efficiently manage their inventory and stock levels.",
-                "Designed and implemented frontend interfaces for seamless user interaction and backend services for robust stock management."
-            ]
-        },
-        {
-            role: "Full Stack Developer",
-            company: "Webmate.in",
-            period: "June 2020 - Dec 2020",
-            achievements: [
-                "Developed end-to-end full stack solutions tailored to business requirements.",
-                "Maintained and improved existing codebase ensuring code quality and performance."
+                "Developed a facial recognition system using OpenCV, Python, and Firebase",
+                "Integrated core libraries like CVZone to enhance system performance",
+                "Successfully completed the project, showcasing strong technical skills."
             ]
         }
     ],
     projects: [
-
         {
             id: 1,
-            title: 'Document Reviewer',
-            problem: 'Banking clients needed an efficient way to review and analyze customer account statements.',
-            solution: 'Designed and developed a React-based web application calculating credit and loans eligibility, improving decision-making accuracy.',
-            tags: ['React', 'JavaScript', 'Tailwind CSS'],
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=500'
+            title: 'Cashsnap - Accounting Web Application',
+            problem: 'Small businesses needed a way to manage daily financial transactions efficiently.',
+            solution: 'Created a financial management app focusing on streamlined transaction management and advanced reporting features for strategic decision-making.',
+            tags: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Bootstrap', 'Firebase'],
+            image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800&h=500',
+            codeLink: 'https://github.com/Diya-Chauhan'
         },
         {
             id: 2,
-            title: 'Mess Eats',
-            problem: 'Bachelors faced frequent difficulties tracking and managing their daily meals efficiently.',
-            solution: 'Engineered a highly responsive MERN stack web application to solve common food-related problems with seamless frontend interaction.',
-            tags: ['MERN Stack', 'MongoDB', 'Node.js', 'React'],
-            codeLink: 'https://github.com/jaimik64/MERN_Mess_Eats',
-            image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800&h=500'
-        },
-        {
-            id: 3,
-            title: 'Donation Management System',
-            problem: 'NGOs required an organized web-based platform to manage and track global donations.',
-            solution: 'A full-stack web application built efficiently parsing SQL operations ensuring solid administration workflows.',
-            tags: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
-            codeLink: 'https://github.com/jaimik64/pro_donate',
-            image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?auto=format&fit=crop&q=80&w=800&h=500'
-        },
-        {
-            id: 4,
-            title: 'Car Rental System',
-            problem: 'Manual tracking of car rental lifecycles was tedious and error-prone.',
-            solution: 'Developed a robust Django application focused on easy reservations and seamless scalable backends.',
-            tags: ['Django', 'Python', 'HTML/CSS'],
-            codeLink: 'https://github.com/jaimik64/django_CarRentalSystem',
-            image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800&h=500'
+            title: 'Vnnovate Solutions: Website Redesign',
+            problem: 'The company website needed enhancement in user experience, visual design, and performance.',
+            solution: 'Designed user-centric interfaces in Figma and developed the frontend utilizing HTML, CSS, and Bootstrap, replicating exact designs.',
+            tags: ['UI/UX', 'Figma', 'HTML', 'CSS', 'Bootstrap'],
+            image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=80&w=800&h=500'
         }
-    ]
+    ] as any[],
 };

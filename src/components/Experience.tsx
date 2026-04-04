@@ -1,75 +1,57 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Briefcase } from 'lucide-react';
 import { profileData } from '../data/profileData';
-import { FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
-
 
 const Experience = () => {
-
-  const { experiences } = profileData;
-
   return (
-    <section id="experience" className="section-odd section-padding relative overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
-          Work <span className="text-electric-blue">Experience</span>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="col-span-1 sm:col-span-2 lg:col-span-2 lg:row-span-2 glass-card p-6 md:p-8 flex flex-col"
+    >
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 shrink-0">
+        <h2 className="text-2xl font-black text-text-main">
+          Work <span className="text-accent-purple">Experience</span>
         </h2>
+      </div>
 
-        <div className="relative">
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-slate-800 transform md:-translate-x-1/2" />
-          {experiences.map((exp: any, index: number) => (
+      <div className="flex-1 overflow-y-auto pr-2 relative scrollbar-thin scrollbar-thumb-purple-200 scrollbar-track-transparent">
+        <div className="absolute left-[15px] top-2 bottom-0 w-[2px] bg-purple-700/20 rounded-full" />
+        <div className="space-y-6">
+          {profileData.experiences.map((exp: any, index: any) => (
+            <motion.div
+              key={index}
+              whileHover={{ x: 5 }}
+              className="relative pl-10 group"
+            >
+              {/* Timeline Dot */}
+              <div className="absolute left-[10px] w-3 h-3 bg-purple-700 rounded-full shadow-sm z-10 transform -translate-y-1/2 top-4 border-2 border-white" />
 
-            <div key={index} className={`relative flex flex-col md:flex-row items-center mb-16 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
-              <div className="absolute left-4 md:left-1/2 w-6 h-6 bg-electric-blue rounded-full border-4 border-slate-900 z-10 transform -translate-x-1/2 md:-translate-x-1/2 mt-6 md:mt-0" />
-
-              {/* Date (for desktop) */}
-              <div className={`hidden md:block w-1/2 px-12 md:px-16 lg:px-20 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                <div className={`text-electric-blue font-mono text-lg font-bold flex items-center gap-2 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                  {index % 2 !== 0 && <FaCalendarAlt />}
+              <div className="bg-white/50 group-hover:bg-white/80 transition-colors p-5 rounded-2xl border border-white/60 shadow-sm relative">
+                <div className="text-xs font-black text-accent-purple tracking-widest uppercase mb-1">
                   {exp.period}
-                  {index % 2 === 0 && <FaCalendarAlt />}
                 </div>
+                <h3 className="text-base sm:text-lg font-black text-text-main group-hover:text-accent-pink transition-colors leading-tight">
+                  {exp.role}
+                </h3>
+                <h4 className="text-xs sm:text-sm text-text-muted font-bold mb-3 flex items-center gap-1 mt-1">
+                  <Briefcase size={14} className="text-accent-rose" />
+                  {exp.company}
+                </h4>
+                <ul className="text-text-main text-xs font-semibold leading-relaxed list-disc list-inside space-y-1">
+                  {exp.achievements.map((ach: string, i: number) => (
+                    <li key={i} className="line-clamp-2">{ach}</li>
+                  ))}
+                </ul>
               </div>
-              {/* Content Card */}
-              <motion.div
-                initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className={`w-full md:w-1/2 ${index % 2 === 0 ? 'pl-12 md:pl-16 lg:pl-24' : 'pl-12 md:pl-0 md:pr-16 lg:pr-24'}`}
-              >
-                <div className="glassmorphism p-8 rounded-2xl transition-all shadow-xl hover:-translate-y-1 relative group hover:border-electric-blue/30">
-                  {/* Mobile Date */}
-                  <div className="md:hidden text-electric-blue font-mono text-sm font-bold mb-2 flex items-center gap-2">
-                    <FaCalendarAlt /> {exp.period}
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-electric-blue transition-colors">{exp.role}</h3>
-                  <h4 className="text-lg text-slate-400 font-medium mb-4 flex items-center gap-2">
-                    <FaBriefcase className="text-slate-500" /> {exp.company}
-                  </h4>
-
-                  <ul className="space-y-3">
-                    {exp.achievements.map((bullet: any, i: number) => (
-                      <li key={i} className="text-slate-300 text-sm leading-relaxed flex items-start">
-                        <span className="text-electric-blue mr-2 mt-1.5">•</span>
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.div>
   );
 };
 
